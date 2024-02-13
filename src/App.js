@@ -3,8 +3,10 @@ import { GoPlusCircle} from "react-icons/go";
 import Todo from './Todo';
 
 const style = {
-  bg: `h-screen w-screen p-4 bg-gradient-to-r from-[#854f6c] to-[#fbe4d8]`
+  bg: `h-screen w-screen p-4 bg-gradient-to-r from-[#854f6c] to-[#fbe4d8]`,
+  heading: `text-5xl`
 }
+
 
 function App() {
 
@@ -20,6 +22,9 @@ const [todos, setTodos] = useState(['learn how to walk', 'stop drinkoing reign']
         </form>
 
         <ul>
+          {todos.map((todo, index)=> (
+            <Todo key={index} todo={todo}/>
+          ))}
           <Todo />
         </ul>
       </div>
