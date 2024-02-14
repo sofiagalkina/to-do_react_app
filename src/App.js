@@ -4,7 +4,13 @@ import Todo from './Todo';
 
 const style = {
   bg: `h-screen w-screen p-4 bg-gradient-to-r from-[#854f6c] to-[#fbe4d8]`,
-  heading: `text-5xl`
+  container: `bg-slate-100 max-w-[600px] w-full m-auto rounded-md shadow-xl p-4`,
+  heading: `text-5xl text-center text-gray-800 `,
+  form: `flex justify-between`,
+  input: `border p-2 w-full text-xl`,
+  button: ` ml-2`,
+  count: `text-center p-2`,
+  
 }
 
 
@@ -27,6 +33,7 @@ const [todos, setTodos] = useState(['learn how to walk', 'stop drinkoing reign']
           ))}
           <Todo />
         </ul>
+        <p className={style.count}>You have 2 todos</p>
       </div>
     </div>
   );
