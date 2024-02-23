@@ -7,6 +7,17 @@
   src: url('./fonts/beckan/Beckan-Personal\ Use.otf') format('opentype');
 }
 
-body {
+@font-face {
+  font-family: 'amaline';
+  src: url('./fonts/amaline/Amaline\ Trial.otf') format('opentype');
+}
+
+
+h3 {
   font-family: 'beckan';
+}
+
+ul {
+  font-family: 'amaline';
+  font-size: 1rem;
 }

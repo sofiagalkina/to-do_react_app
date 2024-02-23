@@ -14,6 +14,7 @@ const style = {
   input: `border p-2 w-full text-xl`,
   button: ` ml-2`,
   count: `text-center p-2`,
+  
 
 }
 
@@ -81,7 +82,7 @@ const deleteTodo = async (id) => {
           <button className={style.button}><GoPlusCircle size={30} /></button>
         </form>
 
-        <ul>
+        <ul className={style.ul}>
           {todos.map((todo, index)=> (
             <Todo key={index} todo={todo} toggleComplete={toggleComplete} deleteTodo={deleteTodo}/>
           ))}

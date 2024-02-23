@@ -8,8 +8,8 @@ const style = {
     row: `flex`,
     text: `ml-2 cursor-pointer`,
     textComplete: `ml-2 cursor-pointer line-through`,
-    button: `cursor-pointer flex items-center`
-
+    button: `cursor-pointer flex items-center`,
+    
 
 }
 
@@ -22,7 +22,7 @@ const Todo = ({todo, toggleComplete, deleteTodo}) => {
                 <input onChange={() => toggleComplete(todo)} type="checkbox" checked={todo.completed ? 'checked' : ''}/>
                 <p onClick={() => toggleComplete(todo)}className={todo.completed ? style.textComplete : style.text}>{todo.text}</p>
             </div>
-            <button onClick={() => deleteTodo(todo.id)}><BsTrash3 /></button>
+            <button onClick={() => deleteTodo(todo.id)}><BsTrash3/></button>
         </li>
     )
 }
