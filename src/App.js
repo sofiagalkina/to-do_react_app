@@ -26,7 +26,7 @@ const [input, setInput] = useState('');
 
 // create todo
 const createTodo = async (e) => {
-  e.preventDefault(e)
+  e.preventDefault(e) // handling default page reload after form submission
   if (input === ''){
     alert('enter a valid task')
     return
@@ -36,7 +36,7 @@ const createTodo = async (e) => {
     completed: false,
 
   })
-  setInput('')
+  setInput('') // clear the input  
 
 };
 
@@ -45,7 +45,7 @@ const createTodo = async (e) => {
 //read todo
 useEffect(()=> {
   const q = query(collection(db, 'todos'))
-  const unsubscribe = onSnapshot(q, (querySnapshot) => {
+  const unsubscribe = onSnapshot(q, (querySnapshot) => { //listens for changes to the query result 
     let todosArr = []
     querySnapshot.forEach((doc) => {
       todosArr.push({...doc.data(), id: doc.id})
